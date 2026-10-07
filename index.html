@@ -64,40 +64,6 @@
         <a href="#contact" class="nav-link">Contact Us</a>
       </nav>
 
-      <!-- Mobile Navigation Drawer -->
-      <div class="mobile-nav-drawer" id="mobile-nav-drawer">
-        <div class="mobile-nav-header">
-          <div class="brand-logo" style="align-items:center;">
-            <img src="assets/images/logo.jpg" alt="Horsebeat Logo" class="brand-logo-img" style="width:38px; height:38px;">
-            <span class="logo-title" style="font-size:1.3rem;">HORSEBEAT</span>
-          </div>
-          <button class="drawer-close-btn" id="close-mobile-menu-btn" aria-label="Close menu">&times;</button>
-        </div>
-        <div class="mobile-nav-links">
-          <a href="#matching-studio" class="mobile-link">✨ The Matching Collection (Sets)</a>
-          <a href="#catalog" class="mobile-link" data-filter-link="saddle-pads">Dressage & Jump Pads</a>
-          <a href="#catalog" class="mobile-link" data-filter-link="rider">Rider Jackets & Tops</a>
-          <a href="#catalog" class="mobile-link" data-filter-link="boots">Protection Boots & Bandages</a>
-          <a href="#catalog" class="mobile-link" data-filter-link="ear-bonnets">Acoustic Ear Bonnets</a>
-          <a href="#lookbook" class="mobile-link">Editorial Lookbook</a>
-          <a href="#contact" class="mobile-link">Contact Us</a>
-        </div>
-        <div class="mobile-nav-footer">
-          <div class="mobile-currency-row">
-            <span style="font-size:0.75rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase;">Currency:</span>
-            <select id="mobile-currency-select" class="mobile-currency-select" aria-label="Select Currency">
-              <option value="BDT" selected>Bangladesh (৳ BDT)</option>
-              <option value="USD">US ($ USD)</option>
-              <option value="EUR">EU (€ EUR)</option>
-              <option value="GBP">UK (£ GBP)</option>
-            </select>
-          </div>
-          <div style="font-size:0.75rem; color:#888; margin-top:14px; line-height:1.5;">
-            📍 307/1, Dhanmondi 8/A, Dhaka<br>
-            📞 +880 1700 000000
-          </div>
-        </div>
-      </div>
 
       <!-- Brand Logo with Company Logo Image -->
       <a href="#" class="brand-logo" aria-label="Horsebeat Home">
@@ -664,6 +630,43 @@
        SLIDE-OUT CART DRAWER & BACKDROP
        ========================================================================== -->
   <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+  <!-- ==========================================================================
+       MOBILE NAVIGATION DRAWER
+       ========================================================================== -->
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <a href="#" class="brand-logo" id="mobile-drawer-brand" aria-label="Horsebeat Home">
+        <img src="assets/images/logo.jpg" alt="Horsebeat Logo" class="brand-logo-img">
+        <span class="logo-title">HORSEBEAT</span>
+      </a>
+      <button class="drawer-close-btn" id="close-mobile-menu-btn" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="#matching-studio" class="mobile-link">✨ The Matching Collection (Sets)</a>
+      <a href="#catalog" class="mobile-link" data-filter-link="saddle-pads">Dressage & Jump Pads</a>
+      <a href="#catalog" class="mobile-link" data-filter-link="rider">Rider Jackets & Tops</a>
+      <a href="#catalog" class="mobile-link" data-filter-link="boots">Protection Boots & Bandages</a>
+      <a href="#catalog" class="mobile-link" data-filter-link="ear-bonnets">Acoustic Ear Bonnets</a>
+      <a href="#lookbook" class="mobile-link">Editorial Lookbook</a>
+      <a href="#contact" class="mobile-link">Contact Us</a>
+    </div>
+    <div class="mobile-nav-footer">
+      <div class="mobile-currency-row">
+        <span class="currency-label">Currency:</span>
+        <select id="mobile-currency-select" class="mobile-currency-select" aria-label="Select Currency">
+          <option value="BDT" selected>Bangladesh (৳ BDT)</option>
+          <option value="USD">US ($ USD)</option>
+          <option value="EUR">EU (€ EUR)</option>
+          <option value="GBP">UK (£ GBP)</option>
+        </select>
+      </div>
+      <div class="mobile-contact-info">
+        <span>📍 307/1, Dhanmondi 8/A, Dhaka</span>
+        <span>📞 +880 1700 000000</span>
+      </div>
+    </div>
+  </aside>
 
   <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart Drawer">
     <div class="drawer-header">

@@ -566,6 +566,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function openCartDrawer() {
+    document.getElementById('mobile-nav-drawer')?.classList.remove('open');
     document.getElementById('cart-drawer')?.classList.add('open');
     document.getElementById('drawer-backdrop')?.classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -874,6 +875,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeMobileBtn = document.getElementById('close-mobile-menu-btn');
 
     function openMobileNav() {
+      document.getElementById('cart-drawer')?.classList.remove('open');
       mobileNavDrawer?.classList.add('open');
       backdrop?.classList.add('open');
       document.body.style.overflow = 'hidden';
@@ -894,6 +896,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     mobileMenuBtn?.addEventListener('click', openMobileNav);
     closeMobileBtn?.addEventListener('click', closeMobileNav);
+
+    // Mobile drawer logo click closes drawer and scrolls to top
+    document.getElementById('mobile-drawer-brand')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeMobileNav();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 
     // Backdrop click closes any active drawer
     backdrop?.addEventListener('click', () => {
