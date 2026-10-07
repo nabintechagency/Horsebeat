@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HORSEBEAT | Modern Equestrian Design for Serious Riders</title>
+  <meta name="description" content="Discover Horsebeat. Luxury equestrian saddle pads, rider apparel, ear bonnets, and matching sets crafted with anatomical precision, premium materials, and eco-friendly bamboo linings.">
+  <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       ANNOUNCEMENT BAR (TOP TICKER & CURRENCY SELECTOR)
+       ========================================================================== -->
+  <div class="announcement-bar" id="announcement-bar">
+    <div class="announcement-inner">
+      <div class="announcement-messages">
+        <div class="ticker-item active">🌿 CRAFTED WITH RECYCLED FIBERS & NATURAL ANTIBACTERIAL BAMBOO</div>
+        <div class="ticker-item">🎖️ TESTED BY OLYMPIC & GRAND PRIX EQUESTRIAN ATHLETES</div>
+        <div class="ticker-item">💫 USE CODE <strong>HORSEBEAT10</strong> FOR 10% OFF YOUR FIRST ORDER</div>
+      </div>
+      <div class="announcement-tools">
+        <div class="currency-picker">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity:0.75;">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <select id="currency-select" aria-label="Select Currency">
+            <option value="BDT" selected>Bangladesh (৳ BDT)</option>
+            <option value="USD">US ($ USD)</option>
+            <option value="EUR">EU (€ EUR)</option>
+            <option value="GBP">UK (£ GBP)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SITE HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-menu-toggle header-action-btn" id="mobile-menu-btn" aria-label="Toggle navigation">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Primary Desktop Navigation -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="#matching-studio" class="nav-link badge-link">Matching Sets</a>
+        <a href="#catalog" class="nav-link" data-filter-link="saddle-pads">Saddle Pads</a>
+        <a href="#catalog" class="nav-link" data-filter-link="rider">Rider Apparel</a>
+        <a href="#lookbook" class="nav-link">Lookbook</a>
+        <a href="#contact" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+        <div class="mobile-nav-header">
+          <div class="brand-logo" style="align-items:center;">
+            <img src="assets/images/logo.jpg" alt="Horsebeat Logo" class="brand-logo-img" style="width:38px; height:38px;">
+            <span class="logo-title" style="font-size:1.3rem;">HORSEBEAT</span>
+          </div>
+          <button class="drawer-close-btn" id="close-mobile-menu-btn" aria-label="Close menu">&times;</button>
+        </div>
+        <div class="mobile-nav-links">
+          <a href="#matching-studio" class="mobile-link">✨ The Matching Collection (Sets)</a>
+          <a href="#catalog" class="mobile-link" data-filter-link="saddle-pads">Dressage & Jump Pads</a>
+          <a href="#catalog" class="mobile-link" data-filter-link="rider">Rider Jackets & Tops</a>
+          <a href="#catalog" class="mobile-link" data-filter-link="boots">Protection Boots & Bandages</a>
+          <a href="#catalog" class="mobile-link" data-filter-link="ear-bonnets">Acoustic Ear Bonnets</a>
+          <a href="#lookbook" class="mobile-link">Editorial Lookbook</a>
+          <a href="#contact" class="mobile-link">Contact Us</a>
+        </div>
+        <div class="mobile-nav-footer">
+          <div class="mobile-currency-row">
+            <span style="font-size:0.75rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase;">Currency:</span>
+            <select id="mobile-currency-select" class="mobile-currency-select" aria-label="Select Currency">
+              <option value="BDT" selected>Bangladesh (৳ BDT)</option>
+              <option value="USD">US ($ USD)</option>
+              <option value="EUR">EU (€ EUR)</option>
+              <option value="GBP">UK (£ GBP)</option>
+            </select>
+          </div>
+          <div style="font-size:0.75rem; color:#888; margin-top:14px; line-height:1.5;">
+            📍 307/1, Dhanmondi 8/A, Dhaka<br>
+            📞 +880 1700 000000
+          </div>
+        </div>
+      </div>
+
+      <!-- Brand Logo with Company Logo Image -->
+      <a href="#" class="brand-logo" aria-label="Horsebeat Home">
+        <img src="assets/images/logo.jpg" alt="Horsebeat Logo" class="brand-logo-img">
+        <span class="logo-title">HORSEBEAT</span>
+      </a>
+
+      <!-- Header Utilities & Actions -->
+      <div class="header-actions">
+        <!-- Search Trigger -->
+        <button class="header-action-btn" id="open-search-btn" title="Search Collections" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <!-- Wishlist Trigger -->
+        <button class="header-action-btn" id="open-wishlist-btn" title="View Wishlist" aria-label="Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="header-badge" id="wishlist-badge-count">2</span>
+        </button>
+
+        <!-- Cart Trigger -->
+        <button class="header-action-btn" id="open-cart-btn" title="Shopping Bag" aria-label="Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="header-badge highlight" id="cart-badge-count">1</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO BANNER SECTION
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-background">
+      <img src="assets/images/hero.jpg" alt="Horsebeat Equestrian Atelier">
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="container" style="position:relative; z-index:3; width:100%;">
+      <div class="hero-content">
+        <!-- Hero section Logo and Name placed on left side -->
+        <div class="hero-brand-badge">
+          <img src="assets/images/logo.jpg" alt="Horsebeat Logo" class="hero-logo-img">
+          <span class="hero-logo-text">HORSEBEAT</span>
+        </div>
+
+        <h1 class="hero-title">Elegance in Every Stride</h1>
+        <p class="hero-subtitle">
+          Horsebeat is a space devoted to the enduring bond between horses and humans. Here, we share moments, reflections, and experiences from my life. You're welcome to join the journey. Thrill of equestrian life, right from the heart of Dhaka city.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#matching-studio" class="btn btn-white">THE MATCHING CONCEPT</a>
+          <a href="#catalog" class="btn btn-secondary" style="border-color:rgba(255,255,255,0.7); color:#fff;">SHOP COLLECTION</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CATEGORY QUICK-NAV STRIP
+       ========================================================================== -->
+  <section class="category-nav-strip">
+    <div class="container">
+      <div class="category-nav-grid">
+        
+        <a href="#catalog" class="cat-pill-card" onclick="document.querySelector('[data-filter=saddle-pads]').click();">
+          <div class="cat-pill-img-wrapper">
+            <img src="assets/images/merlot_set.jpg" alt="Dressage Saddle Pads">
+          </div>
+          <span class="cat-pill-title">Dressage Pads</span>
+          <span class="cat-pill-count">18 Styles</span>
+        </a>
+
+        <a href="#catalog" class="cat-pill-card" onclick="document.querySelector('[data-filter=saddle-pads]').click();">
+          <div class="cat-pill-img-wrapper">
+            <img src="assets/images/champagne_set.jpg" alt="Jump Saddle Pads">
+          </div>
+          <span class="cat-pill-title">Jumping Pads</span>
+          <span class="cat-pill-count">14 Styles</span>
+        </a>
+
+        <a href="#catalog" class="cat-pill-card" onclick="document.querySelector('[data-filter=rider]').click();">
+          <div class="cat-pill-img-wrapper">
+            <img src="assets/images/rider_jacket.jpg" alt="Rider Jackets & Outerwear">
+          </div>
+          <span class="cat-pill-title">Winter Jackets</span>
+          <span class="cat-pill-count">12 Styles</span>
+        </a>
+
+        <a href="#catalog" class="cat-pill-card" onclick="document.querySelector('[data-filter=rider]').click();">
+          <div class="cat-pill-img-wrapper">
+            <img src="assets/images/rider_baselayer.jpg" alt="Technical Base Layers">
+          </div>
+          <span class="cat-pill-title">Base Layers</span>
+          <span class="cat-pill-count">16 Colors</span>
+        </a>
+
+        <a href="#catalog" class="cat-pill-card" onclick="document.querySelector('[data-filter=boots]').click();">
+          <div class="cat-pill-img-wrapper">
+            <img src="assets/images/sycamore_set.jpg" alt="Boots & Fleece Bandages">
+          </div>
+          <span class="cat-pill-title">Leg Protection</span>
+          <span class="cat-pill-count">8 Styles</span>
+        </a>
+
+        <a href="#matching-studio" class="cat-pill-card">
+          <div class="cat-pill-img-wrapper" style="border-color:var(--color-merlot);">
+            <img src="assets/images/hero.jpg" alt="Complete Matching Sets">
+          </div>
+          <span class="cat-pill-title" style="color:var(--color-merlot);">Matching Sets</span>
+          <span class="cat-pill-count">Save 15%</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INTERACTIVE MATCHING CONCEPT STUDIO (SIGNATURE FEATURE)
+       ========================================================================== -->
+  <section class="matching-studio-section" id="matching-studio">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">The Signature Horsebeat Concept</span>
+        <h2>The Matching Collection</h2>
+        <p>
+          Harmonize horse and equestrian athlete. Choose your signature colorway to discover a meticulously matched 4-piece ensemble with bundled atelier savings.
+        </p>
+      </div>
+
+      <!-- Injected dynamically via app.js -->
+      <div id="matching-studio-container"></div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PRODUCT CATALOG & FILTERABLE GRID
+       ========================================================================== -->
+  <section class="catalog-section" id="catalog">
+    <div class="container">
+      
+      <div class="section-head" style="margin-bottom: 24px;">
+        <span class="eyebrow">Equestrian Wardrobe</span>
+        <h2>Curated Seasonal Drops</h2>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="catalog-filter-bar">
+        <div class="catalog-filter-tabs">
+          <button class="filter-tab-btn active" data-filter="all">All Pieces</button>
+          <button class="filter-tab-btn" data-filter="saddle-pads">Saddle Pads</button>
+          <button class="filter-tab-btn" data-filter="rider">Rider Apparel</button>
+          <button class="filter-tab-btn" data-filter="boots">Protection Boots</button>
+          <button class="filter-tab-btn" data-filter="ear-bonnets">Ear Bonnets</button>
+          <button class="filter-tab-btn" data-filter="new">New Releases</button>
+        </div>
+
+        <div class="catalog-sort-wrapper">
+          <label for="catalog-sort">Hardware Accent:</label>
+          <select id="catalog-sort" aria-label="Sort by hardware">
+            <option value="all">All Finishes</option>
+            <option value="rosegold">Rose Gold Metal</option>
+            <option value="silver">Chrome Silver</option>
+            <option value="brass">Brushed Brass</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Injected dynamically via app.js -->
+      <div class="products-grid" id="products-grid"></div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EDITORIAL "SHOP THE LOOK" HOTSPOTS SECTION
+       ========================================================================== -->
+  <section class="lookbook-section" id="lookbook">
+    <div class="container">
+      <div class="lookbook-container">
+        
+        <!-- Interactive Stage with Hotspots -->
+        <div class="lookbook-stage">
+          <img src="assets/images/lifestyle_warmth.jpg" alt="Shop The Horsebeat Look">
+          <!-- Hotspots dynamically pinned via app.js -->
+        </div>
+
+        <!-- Editorial Description & Featured Items -->
+        <div class="lookbook-info">
+          <span class="eyebrow" style="color:var(--color-champagne);">Editorial Lookbook</span>
+          <h2>The Sunset Dressage Edit</h2>
+          <p>
+            Captured during golden hour schooling. Our Champagne Royale quilted pad and tailored winter outerwear create an effortlessly polished presence in and out of the arena.
+          </p>
+
+          <div class="lookbook-featured-items">
+            <div class="lookbook-item-snippet">
+              <div>
+                <strong style="display:block; font-size:0.9rem;">Nordic Emerald Atelier Pad</strong>
+                <span style="font-size:0.75rem; color:rgba(255,255,255,0.6);">High-Wither Anatomical Cut</span>
+              </div>
+              <button class="btn btn-white btn-sm" onclick="window.addToCartDirect('lifestyle-emerald-heritage-pad')">+ ADD ৳16,500</button>
+            </div>
+
+            <div class="lookbook-item-snippet">
+              <div>
+                <strong style="display:block; font-size:0.9rem;">Thermo Winter Riding Jacket</strong>
+                <span style="font-size:0.75rem; color:rgba(255,255,255,0.6);">Down-Feel Eco Thermal Fill</span>
+              </div>
+              <button class="btn btn-white btn-sm" onclick="window.addToCartDirect('denali-navy-jacket')">+ ADD ৳24,000</button>
+            </div>
+          </div>
+
+          <a href="#matching-studio" class="luxury-link" style="color:var(--color-white);">
+            VIEW ALL EDITORIAL LOOKS →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT US SECTION & FORM
+       ========================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Get in Touch</span>
+        <h2>Contact Us</h2>
+        <p>
+          Whether you have a question about our saddle pads, bespoke sizing, or wish to schedule an atelier appointment in Dhaka, we are here to assist you.
+        </p>
+      </div>
+
+      <div class="contact-layout-grid">
+        <!-- Contact Details Card -->
+        <div class="contact-info-card">
+          <span class="eyebrow" style="color:var(--color-merlot);">Flagship Location</span>
+          <h3>Dhaka Atelier</h3>
+          <p>
+            Experience our fabrics, examine our anatomical wither cuts, and consult with our specialists in person.
+          </p>
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-detail-title">Atelier Address</div>
+              <div class="contact-detail-desc">307/1, Dhanmondi 8/A, Dhaka, Bangladesh, 1209</div>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-detail-title">Electronic Mail</div>
+              <div class="contact-detail-desc">care@horsebeat.com</div>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-detail-title">Phone & WhatsApp</div>
+              <div class="contact-detail-desc">+880 1700 000000</div>
+            </div>
+          </div>
+
+          <div class="contact-detail-item" style="margin-bottom:0;">
+            <div class="contact-detail-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="10" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-detail-title">Hours of Operation</div>
+              <div class="contact-detail-desc">Saturday – Thursday: 10:00 AM – 8:00 PM<br>Friday: By Private Appointment</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form Card -->
+        <div class="contact-form-card">
+          <span class="eyebrow">Direct Inquiries</span>
+          <h3>Send a Message</h3>
+          <p class="form-desc">Fill out your details and our atelier team will respond promptly.</p>
+
+          <form id="contact-us-form">
+            <div class="contact-form-grid">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Your Name *</label>
+                <input type="text" id="contact-name" class="form-control" placeholder="e.g. Zara Rahman" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address *</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="e.g. zara@example.com" required>
+              </div>
+            </div>
+
+            <div class="contact-form-grid">
+              <div class="form-group">
+                <label for="contact-phone" class="form-label">Phone Number</label>
+                <input type="tel" id="contact-phone" class="form-control" placeholder="+880 1XXX-XXXXXX">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Inquiry Subject</label>
+                <select id="contact-subject" class="form-control">
+                  <option value="general">General Inquiries & Reflections</option>
+                  <option value="saddle-fitting">Custom Saddle Pad Sizing & Fitting</option>
+                  <option value="matching-set">The Matching Set Consultation</option>
+                  <option value="order-support">Order Support & Delivery</option>
+                  <option value="appointment">Schedule Atelier Visit</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Your Message *</label>
+              <textarea id="contact-message" class="form-control" placeholder="Share your message, thoughts, or custom saddle pad request..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              SEND MESSAGE →
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       COMMUNITY & REVIEWS SHOWCASE
+       ========================================================================== -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Verified Equestrian Testimonials</span>
+        <h2>Praised by Dedicated Riders</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div>
+            <div class="review-stars">★★★★★</div>
+            <h4 class="review-title">"The fit over the withers is second to none"</h4>
+            <p class="review-body">
+              "I have ridden in countless saddle pad brands, but Horsebeat pads remain the only ones that never slip or put pressure on the horse’s spinal canal. Plus, the Merlot velvet with rose gold is pure art in the ring!"
+            </p>
+          </div>
+          <div class="review-author-meta">
+            <div>
+              <div class="author-name">Astrid Lindqvist</div>
+              <div class="author-discipline">Grand Prix Dressage • Dhaka Club Equestrian</div>
+            </div>
+            <span class="verified-tag">✓ Verified Rider</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div>
+            <div class="review-stars">★★★★★</div>
+            <h4 class="review-title">"Unbelievable durability after dozens of washes"</h4>
+            <p class="review-body">
+              "The metallic badge doesn’t tarnish, the velvet doesn’t crush, and the bamboo lining keeps my horses dry and cool even on long competition days. The matching concept makes getting dressed for the arena an absolute joy."
+            </p>
+          </div>
+          <div class="review-author-meta">
+            <div>
+              <div class="author-name">Charlotte De Vries</div>
+              <div class="author-discipline">Show Jumping Champion • Gulshan Riding Academy</div>
+            </div>
+            <span class="verified-tag">✓ Verified Rider</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div>
+            <div class="review-stars">★★★★★</div>
+            <h4 class="review-title">"My stable cannot stop complimenting our sets!"</h4>
+            <p class="review-body">
+              "Ordered the complete Champagne Royale 4-piece set. The packaging was like opening high couture. The attention to detail—from the stitching to the fleece boots—is extraordinary. Highly recommend!"
+            </p>
+          </div>
+          <div class="review-author-meta">
+            <div>
+              <div class="author-name">Eleanor Vance-Clarke</div>
+              <div class="author-discipline">Hunter / Jumper • Dhanmondi Equestrian Circle</div>
+            </div>
+            <span class="verified-tag">✓ Verified Rider</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INSTAGRAM / COMMUNITY GRID (#HORSEBEAT)
+       ========================================================================== -->
+  <section class="community-section">
+    <div class="community-head">
+      <span class="eyebrow">Tag @HorsebeatOfficial</span>
+      <h2>#HorsebeatRider on Instagram</h2>
+    </div>
+
+    <div class="community-grid">
+      <div class="community-photo-card">
+        <img src="assets/images/hero.jpg" alt="Equestrian arena style">
+        <div class="community-overlay">
+          <span class="community-handle">@astrid_equestrian</span>
+          <span class="community-tagline">Wearing Nordic Forest Atelier Set</span>
+        </div>
+      </div>
+
+      <div class="community-photo-card">
+        <img src="assets/images/merlot_set.jpg" alt="Merlot velvet flatlay">
+        <div class="community-overlay">
+          <span class="community-handle">@dressage_couture</span>
+          <span class="community-tagline">Merlot Velvet & Rose Gold Badges</span>
+        </div>
+      </div>
+
+      <div class="community-photo-card">
+        <img src="assets/images/rider_jacket.jpg" alt="Rider jacket stable lifestyle">
+        <div class="community-overlay">
+          <span class="community-handle">@freja_warmbloods</span>
+          <span class="community-tagline">Midnight Thermo Winter Coat</span>
+        </div>
+      </div>
+
+      <div class="community-photo-card">
+        <img src="assets/images/rider_baselayer.jpg" alt="Rider in dusty rose base layer">
+        <div class="community-overlay">
+          <span class="community-handle">@horsebeat_riders</span>
+          <span class="community-tagline">Desert Rose Technical Layer</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       NEWSLETTER VIP ACCESS SECTION
+       ========================================================================== -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-box">
+        <span class="eyebrow" style="color:var(--color-champagne);">Join the Atelier</span>
+        <h2>The Horsebeat Circle</h2>
+        <p>
+          Subscribe to receive 10% off your initial order, private invitations to limited seasonal drops, and insider equestrian style notes from our atelier.
+        </p>
+
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email address">
+          <button type="submit" class="newsletter-btn">JOIN CIRCLE</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+            <img src="assets/images/logo.jpg" alt="Horsebeat Logo" class="brand-logo-img" style="width:48px; height:48px;">
+            <span class="brand-title" style="margin-bottom:0;">HORSEBEAT</span>
+          </div>
+          <p>
+            Modern equestrian design for serious riders. Combining couture aesthetics with Olympic-grade anatomical performance and sustainable craftsmanship.
+          </p>
+          <div style="font-size:0.8rem; color:#bbb; line-height:1.8;">
+            📍 <strong>Flagship Address:</strong><br>
+            307/1, Dhanmondi 8/A, Dhaka, Bangladesh, 1209<br>
+            care@horsebeat.com • +880 1700 000000
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Collections</h4>
+          <div class="footer-links">
+            <a href="#matching-studio">The Merlot Velvet Edit</a>
+            <a href="#matching-studio">Sycamore Forest Green</a>
+            <a href="#matching-studio">Champagne Royale</a>
+            <a href="#catalog">Dressage Saddle Pads</a>
+            <a href="#catalog">Jumping Saddle Pads</a>
+            <a href="#catalog">Winter Outerwear</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Customer Care</h4>
+          <div class="footer-links">
+            <a href="#contact">Contact Us</a>
+            <a href="#">Size & Saddle Fit Guide</a>
+            <a href="#">Wash & Velvet Care Instructions</a>
+            <a href="#">Shipping & Returns Policy</a>
+            <a href="#">Track Your Shipment</a>
+            <a href="#">Olympic Rider Sponsorship</a>
+            <a href="#">Sustainability Pledge</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>About Horsebeat</h4>
+          <div class="footer-links">
+            <a href="#">Our Flagship Studio</a>
+            <a href="#">The Bamboo Textile Story</a>
+            <a href="#">Dhaka Flagship Store</a>
+            <a href="#">Press & Editorial Features</a>
+            <a href="#">Careers at Horsebeat</a>
+            <a href="#">Terms & Privacy</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 HORSEBEAT LTD. ALL RIGHTS RESERVED.</div>
+        <div class="payment-badges">
+          <span class="payment-pill">BKASH</span>
+          <span class="payment-pill">NAGAD</span>
+          <span class="payment-pill">VISA</span>
+          <span class="payment-pill">MASTERCARD</span>
+          <span class="payment-pill">AMEX</span>
+          <span class="payment-pill">APPLE PAY</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       SLIDE-OUT CART DRAWER & BACKDROP
+       ========================================================================== -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="drawer-header">
+      <h3>Your Shopping Bag</h3>
+      <button class="drawer-close-btn" id="close-cart-btn" aria-label="Close cart">&times;</button>
+    </div>
+
+    <!-- Free Shipping Meter -->
+    <div class="drawer-shipping-meter">
+      <div class="meter-label" id="cart-meter-text">
+        Add <strong>৳2,500</strong> more to unlock <strong>FREE EXPRESS SHIPPING</strong>
+      </div>
+      <div class="meter-bar-track">
+        <div class="meter-bar-fill" id="cart-meter-fill" style="width: 86%;"></div>
+      </div>
+    </div>
+
+    <!-- Items List Container -->
+    <div class="drawer-body" id="cart-drawer-items">
+      <!-- Injected by app.js -->
+    </div>
+
+    <!-- Cart Footer & Checkout -->
+    <div class="drawer-footer">
+      <!-- Promo Code Box -->
+      <div style="display:flex; gap:8px; margin-bottom:16px;">
+        <input type="text" id="discount-code-input" placeholder="Promo code (e.g. HORSEBEAT10)" style="flex:1; padding:8px 12px; font-size:0.75rem; border:1px solid var(--color-border); outline:none;">
+        <button class="btn btn-secondary btn-sm" id="apply-discount-btn">APPLY</button>
+      </div>
+
+      <div class="drawer-summary-row">
+        <span>Subtotal:</span>
+        <span id="cart-subtotal-price">৳15,500</span>
+      </div>
+
+      <div class="drawer-summary-row" id="cart-discount-row" style="display:none; color:var(--color-merlot);">
+        <span>VIP Promo Discount:</span>
+        <span id="cart-discount-val">-৳1,550</span>
+      </div>
+
+      <div class="drawer-summary-row">
+        <span>Express Insured Shipping:</span>
+        <span style="color:#2e6930; font-weight:600;">FREE</span>
+      </div>
+
+      <div class="drawer-summary-row total-row">
+        <span>Estimated Total:</span>
+        <span id="cart-total-price">৳15,500</span>
+      </div>
+
+      <button class="btn btn-primary btn-block" id="cart-checkout-btn">
+        PROCEED TO SECURE CHECKOUT →
+      </button>
+
+      <div style="text-align:center; font-size:0.68rem; color:var(--color-mid-gray); margin-top:12px;">
+        🔒 256-Bit SSL Encrypted • 30-Day Free Return Guarantee
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       QUICK VIEW PRODUCT MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="quick-view-modal">
+    <div class="quick-view-dialog" id="quick-view-content">
+      <!-- Injected by app.js -->
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       WISHLIST MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="wishlist-modal">
+    <div class="quick-view-dialog" style="grid-template-columns:1fr; max-width:550px; padding:30px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:20px; border-bottom:1px solid var(--color-border); padding-bottom:14px;">
+        <h3 style="font-size:1.6rem;">Saved Pieces</h3>
+        <button class="modal-close-btn" id="close-wishlist-btn" style="position:static;">&times;</button>
+      </div>
+      <div id="wishlist-items-container">
+        <!-- Injected by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       PREDICTIVE SEARCH MODAL
+       ========================================================================== -->
+  <div class="search-modal" id="search-modal">
+    <div class="search-header-row">
+      <span class="eyebrow" style="margin-bottom:0;">Live Atelier Search</span>
+      <button class="drawer-close-btn" id="close-search-btn" style="font-size:2rem;">&times;</button>
+    </div>
+
+    <div class="search-input-box">
+      <input type="text" id="search-query-input" placeholder="Search velvet saddle pads, jackets, ear bonnets..." autofocus>
+    </div>
+
+    <div class="search-results-container" id="search-results-list">
+      <p style="color:var(--color-mid-gray); text-align:center; padding:20px;">
+        Start typing to discover pieces across our seasonal edits...
+      </p>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-box" id="app-toast"></div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
