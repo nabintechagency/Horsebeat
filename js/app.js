@@ -1,5 +1,5 @@
 /**
- * HORSEBEAT - EQUESTRIAN ATELIER
+ * HORSEBEAT - EQUESTRIAN ATELIER (v1.1.0)
  * Application Controller & Interactive Logic
  */
 

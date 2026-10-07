@@ -1,0 +1,19 @@
+{
+  "name": "horsebeat",
+  "version": "1.1.0",
+  "description": "Scandinavian Luxury Equestrian Atelier Web Storefront",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx -y serve -l 3000 .",
+    "dev": "npx -y serve -l 3000 ."
+  },
+  "keywords": [
+    "equestrian",
+    "luxury",
+    "ecommerce",
+    "fashion",
+    "storefront"
+  ],
+  "author": "nabintechagency",
+  "license": "UNLICENSED"
+}

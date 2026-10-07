@@ -1,8 +1,9 @@
 # HORSEBEAT | Modern Equestrian Atelier
 
-**Address: 307/1, Dhanmondi 8/A, Dhaka, Bangladesh, 1209**
-**Currency: BDT (৳)**
-**Inspired by Equestrian Stockholm (`https://equestrianstockholm.com/`)**
+**Version:** `1.1.0`  
+**Address:** 307/1, Dhanmondi 8/A, Dhaka, Bangladesh, 1209  
+**Currency:** BDT (৳)  
+**Inspired by:** Equestrian Stockholm (`https://equestrianstockholm.com/`)  
 
 A high-fashion, Scandinavian luxury equestrian e-commerce and editorial web application tailored for discerning riders and haute horsemanship.
 
@@ -83,5 +84,19 @@ d:/Horsebeat/
 │   ├── products.js                     # Products, sets, currencies, and reviews data
 │   └── app.js                          # State management, cart, wishlist, currency logic
 ├── index.html                          # Master luxury storefront application
+├── package.json                        # Project metadata and version configuration
 └── README.md
 ```
+
+---
+
+## 📋 Changelog
+
+### [1.1.0] - 2026-10-07
+- **Mobile Side Navigation Overhaul**:
+  - Resolved stacking context conflict where the dark overlay backdrop darkened the slide-out menu drawer.
+  - Relocated drawer to root DOM alongside modals with `z-index: 220`.
+  - Added safe area insets and `visibility` transitions to prevent off-screen focus trapping.
+  - Polished close button ergonomics and navigation link arrow cues (`›`).
+  - Added mutual exclusion between cart and navigation drawers.
+- **Project Versioning**: Established formal project manifest (`package.json`) at v1.1.0.
